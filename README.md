@@ -1,2 +1,0 @@
-# TodoList
-### a Sails application
