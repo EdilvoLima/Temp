@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset=utf-8 />
+    <title>TODO LIST</title>
+    <script src="https://ajas.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+</head>
+<body ng-controller="TodoCtrl">
+    <div>
+        <input type="checkbox"/>
+        <input type="text"/>
+        <style>
+            ::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+        </style>
+        <input type=date id=dateInput> 
+        <script>
+            dateInput.addEventListener('keydown', function(event) {
+                if (event.keyIdentifier == "Down") {
+                event.preventDefault()
+                }
+            }, false);
+        </script>
+    </div>
+</body>
+</html>
