@@ -1,5 +1,5 @@
 # istim-ranking
-[![Build Status](https://travis-ci.org/processos2014/temp.png?branch=master)](https://travis-ci.org/processos2014/temp)
+[![Build Status](https://travis-ci.org/Processos2014/Temp.png?branch=master)](https://travis-ci.org/Processos2014/Temp)
 
 TODO LIST API for Processos de Software
 
