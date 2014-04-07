@@ -44,6 +44,8 @@
 		    <th>Tarefa</th>
 		    <th>Previsão</th>
                     <th></th>
+                    <th></th>
+                    <th></th>
 		</tr>
 	    </thead>
 	    <tbody>
@@ -69,6 +71,14 @@
                     
                     <td width="250" align="center">
 			<a href="" ng-click = "removeTodo($index)">Remove</a>
+		    </td>
+                    
+                    <td width="250" align="center">
+			<a href="" ng-click = "move($index, 'up')">Up</a>
+		    </td>
+                    
+                    <td width="250" align="center">
+			<a href="" ng-click = "move($index, 'down')">Down</a>
 		    </td>
                     
 		  </tr>
