@@ -1,7 +1,8 @@
 function TodoCtrl($scope) {
   $scope.todos = [
     {text:'learn angular', date:'2013-01-01', done:true},
-    {text:'build an angular app', date:'2013-01-01', done:false}];
+    {text:'build an angular app', date:'2013-01-01', done:false}
+    ];
 
   $scope.addTodo = function() {
     $scope.todos.push({text:$scope.todoText, date:$scope.todoDate, done:false});
@@ -24,4 +25,10 @@ function TodoCtrl($scope) {
       if (!todo.done) $scope.todos.push(todo);
     });
   };
+  
+  $scope.removeTodo = function(start){
+    $scope.todos.splice(start, 1);
+  }
+  
+  
 };
