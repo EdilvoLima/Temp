@@ -6,12 +6,25 @@
  * @docs		:: http://sailsjs.org/#!documentation/models
  */
 
-module.exports = {
-
-  attributes: {
-  	text: 'STRING',
-  	date: 'DATE'
-  	
-  }
-
+var Todo = {
+      attributes:{
+            text:{
+                  type: 'STRING',
+                  required: true
+            },
+            date:{
+                  type: 'DATE',
+                  required: true
+            },
+            prioridade:{
+                  type: 'STRING',
+                  required: true
+            },
+            done:{
+                  type: 'BOOLEAN',
+                  required: 'true'
+            }
+      }
 };
+
+module.exports = Todo;
