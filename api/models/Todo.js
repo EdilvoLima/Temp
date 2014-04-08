@@ -22,7 +22,7 @@ var Todo = {
             },
             done:{
                   type: 'BOOLEAN',
-                  required: 'true'
+                  required: true
             }
       }
 };
