@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app class="body">
+<html ng-app="todo-list" class="body">
     <head>
         <style type="text/css">
             .h2{
@@ -15,7 +15,7 @@
                 border-width: thin;
                 padding: 3px;
             }
-            .button {
+            .bultton {
                 background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
                 background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
                 background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
@@ -36,7 +36,7 @@
                 font-weight:bold;
                 padding:6px 24px;
                 text-decoration:none;
-            }.button:hover {
+            }.bultton:hover {
                 background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
                 background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
                 background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
@@ -45,7 +45,7 @@
                 background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
                 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
                 background-color:#ffab23;
-            }.button:active {
+            }.bultton:active {
                 position:relative;
                 top:1px;
             }
@@ -149,11 +149,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
 	<script src="js/todo.js"></script>
     </head>
-    <body>
+    <body ng-controller="TodoCtrl">
       <h2 class="h2" align="center">Todo List</h2>
-      <span>{{remaining()}} of {{todos.length}} remaining</span>
-	[ <a href="" ng-click="archive()">archive</a> ]
-        <div ng-controller="TodoCtrl" class="CSSTableGenerator" >
+      <!-- <span>{{remaining()}} of {{todos.length}} remaining</span> -->
+	<!-- [ <a href="" ng-click="archive()">archive</a> ] -->
+        <div class="CSSTableGenerator" >
                 <table >
                     <thead>
                         <td>Open</td>
@@ -169,11 +169,11 @@
                           <tr type="1" ng-repeat="todo in todos">
 
                             <td>
-                                <span class="button" ng:click="todo.done = false">Open</span>
+                                <span class="bultton" ng:click="todo.done = false">Open</span>
                             </td>
 
                             <td>
-                                <span class="button" ng:click="todo.done = true">Done</span>
+                                <span class="bultton" ng:click="todo.done = true">Done</span>
                             </td>
 
                             <!-- <input type="checkbox" ng-model="todo.done"> -->
@@ -186,15 +186,15 @@
                             </td>
 
                             <td align="center">
-                                <a class="button" ng-click = "removeTodo($index)">Remove</a>
+                                <a class="bultton" ng-click = "removeTodo($index)">Remove</a>
                             </td>
 
                             <td align="center">
-                                <a class="button" ng-click = "move($index, 'up')">Up</a>
+                                <a class="bultton" ng-click = "move($index, 'up')">Up</a>
                             </td>
 
                             <td align="center">
-                                <a align="center" class="button" ng-click = "move($index, 'down')">Down</a>{{index}}
+                                <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>{{index}}
                             </td>
 
                           </tr>
@@ -204,9 +204,8 @@
         </div>
 
             <form ng-submit="addTodo()">
-	  <input class="txtarea" type="text" ng-model="todoText"  size="138"
-		 placeholder="add new todo here">
-	  <input class="txtarea" type="date" ng-model="todoDate" placeholder="yyyy-MM-dd" required />
+	  <input type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" />
+	  <input type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required />
 	  <input class="button" type="submit" value="add">
 	</form>
 

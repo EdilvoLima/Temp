@@ -1,3 +1,5 @@
+var todoList = angular.module('todo-list', []);
+var url_default = 'http://localhost:1337/';
 function TodoCtrl($scope) {
   $scope.todos = [
     {text:'learn angular', date:'2013-01-01', done:true},
@@ -5,9 +7,16 @@ function TodoCtrl($scope) {
     ];
 
   $scope.addTodo = function() {
-    $scope.todos.push({text:$scope.todoText, date:$scope.todoDate, done:false});
-    $scope.todoText = '';
-    $scope.todoDate = '';
+      var newTodo = {
+        done:false,
+        text: $scope.todo_text,
+        date: $scope.todo_date,
+        prioridade: 'zero'
+      };
+    //$scope.todos.push({text:$scope.todo_text, date:$scope.todo_date, done:false});
+    $scope.todos.push(newTodo);
+    $scope.todo_Text = '';
+    $scope.todo_Date = '';
   };
 
   $scope.remaining = function() {
