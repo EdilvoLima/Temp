@@ -11,7 +11,6 @@ function TodoCtrl($scope) {
         done:false,
         text: $scope.todo_text,
         date: $scope.todo_date,
-        prioridade: 'zero'
       };
     //$scope.todos.push({text:$scope.todo_text, date:$scope.todo_date, done:false});
     $scope.todos.push(newTodo);
@@ -60,3 +59,4 @@ function TodoCtrl($scope) {
   }
   
 };
+

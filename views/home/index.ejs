@@ -168,32 +168,32 @@
                         <ul class="unstyled">
                           <tr type="1" ng-repeat="todo in todos">
 
-                            <td>
+                            <td width="5" align="center">
                                 <span class="bultton" ng:click="todo.done = false">Open</span>
                             </td>
 
-                            <td>
+                            <td width="5" align="center">
                                 <span class="bultton" ng:click="todo.done = true">Done</span>
                             </td>
 
                             <!-- <input type="checkbox" ng-model="todo.done"> -->
-                            <td>
+                            <td width="2000">
                                 <span class="done-{{todo.done}}">{{todo.text}}</span>
                             </td>
 
-                            <td align="center">
+                            <td width="200" align="center">
                                 <span class="done-{{todo.done}}">{{todo.date}}</span>
                             </td>
 
-                            <td align="center">
+                            <td width="5" align="center">
                                 <a class="bultton" ng-click = "removeTodo($index)">Remove</a>
                             </td>
 
-                            <td align="center">
+                            <td width="5" align="center">
                                 <a class="bultton" ng-click = "move($index, 'up')">Up</a>
                             </td>
 
-                            <td align="center">
+                            <td width="5" align="center">
                                 <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>{{index}}
                             </td>
 
@@ -206,7 +206,7 @@
             <form ng-submit="addTodo()">
 	  <input type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" />
 	  <input type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required />
-	  <input class="button" type="submit" value="add">
+	  <input class="bultton" type="submit" value="add">
 	</form>
 
     </body>
