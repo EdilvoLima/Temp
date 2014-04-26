@@ -1,12 +1,12 @@
 {
-    "name": "processos2014-temp",
+    "name": "proc",
     "private": true,
-    "version": "0.0.0-2",
+    "version": "0.0.0-4",
     "description": "a Sails application",
     "dependencies": {
         "sails": "0.9.11",
         "grunt": "0.4.1",
-        "sails-disk": "~0.9.0",
+        "sails-mongo": "~0.9.7",
         "ejs": "0.8.4",
         "optimist": "0.3.4"
     },
@@ -18,7 +18,7 @@
     "repository": "",
     "author": "",
     "license": "",
-    "subdomain": "processos2014-temp",
+    "subdomain": "proc",
     "engines": {
         "node": "0.10.x"
     }

@@ -34,8 +34,19 @@ module.exports.routes = {
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
     view: 'home/index'
+  },
+  '/test': {
+    view: 'home/teste'
+  },
+  'get /find.json': 'TodoController.find',
+  
+  '/hide': 'TodoController.hide'
+  /*'Todo/todos.json':{
+    controller: 'TodoController',
+    action: 'index'
   }
-
+  */
+  
   /*
   // But what if you want your home page to display
   // a signup form located at `views/user/signup.ejs`?

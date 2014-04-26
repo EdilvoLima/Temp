@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="todo-list" class="body">
+<html ng-app="todoList" class="body">
     <head>
         <style type="text/css">
             .h2{
@@ -105,7 +105,7 @@
 	border-width:0px 1px 1px 0px;
 	text-align:left;
 	padding:17px;
-	font-size:10px;
+	font-size:14px;
 	font-family:Arial;
 	font-weight:normal;
 	color:#000000;
@@ -123,7 +123,7 @@
 
 	background-color:#003366;
 	border:0px solid #bababa;
-	text-align:center;
+	/*text-align:center;*/
 	border-width:0px 0px 1px 1px;
 	font-size:14px;
 	font-family:Arial;
@@ -149,10 +149,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
 	<script src="js/todo.js"></script>
     </head>
-    <body ng-controller="TodoCtrl">
+    <body ng-controller="todoListCtrl">
       <h2 class="h2" align="center">Todo List</h2>
-      <!-- <span>{{remaining()}} of {{todos.length}} remaining</span> -->
-	<!-- [ <a href="" ng-click="archive()">archive</a> ] -->
+      <span>{{remaining()}} of {{todos.length}} remaining</span>
+	[ <a href="" ng-click="archive()">archive</a> ]
         <div class="CSSTableGenerator" >
                 <table >
                     <thead>
@@ -163,6 +163,7 @@
                         <td>Remover</td>
                         <td>Cima</td>
                         <td>Baixo</td>
+                        <td>Testes</td>
                     </thead>
                     <tbody>
                         <ul class="unstyled">
@@ -194,7 +195,10 @@
                             </td>
 
                             <td width="5" align="center">
-                                <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>{{index}}
+                                <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>
+                            </td>
+                            <td>
+                                prioridade: {{$index}} / id:{{todo.id}}
                             </td>
 
                           </tr>
@@ -203,9 +207,9 @@
                 </table>
         </div>
 
-            <form ng-submit="addTodo()">
-	  <input type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" />
-	  <input type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required />
+        <form action="/Todo/create" method="POST" ng-submit="addTodo()">
+	  <input class="textarea" type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" name="text"/>
+	  <input class="textarea" type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required name="date"/>
 	  <input class="bultton" type="submit" value="add">
 	</form>
 

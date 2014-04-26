@@ -17,33 +17,27 @@
 
 module.exports = {
     
-  
-  /**
-   * Action blueprints:
-   *    `/todo/text:string`
-   */
-   string: function (req, res) {
+    create: function(req, res, next) {
+      Todo.create( req.params.all(), function todoCreated (err, todo){
+         res.json(todo);
+      });
+    },
     
-    // Send a JSON response
-    return res.json({
-      hello: 'world'
-    });
-  },
-
-
-  /**
-   * Action blueprints:
-   *    `/todo/date:date`
-   */
-   date: function (req, res) {
+    find: function(req, res, next){
+      Todo.find(function foundTodos(err, todos){
+         res.json(todos);
+      });
+    },
     
-    // Send a JSON response
-    return res.json({
-      hello: 'world'
-    });
-  },
-
-
+    show: function(req, res, next){
+      Todo.find(function foundTodos(err, todos){
+         res.json(todos);
+      });
+    },
+    
+    hide: function(req, res, next) {
+      res.send("Estava me escondendo dos testes!");
+    },
 
 
   /**
