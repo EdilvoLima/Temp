@@ -39,6 +39,10 @@ module.exports.routes = {
     view: 'home/teste'
   },
   'get /find.json': 'TodoController.find',
+  '/Todo/destroy':{
+    view: 'home/index'
+  },
+  //'destroy /Todo/destroy': 'TodoController.',
   
   '/hide': 'TodoController.hide'
   /*'Todo/todos.json':{

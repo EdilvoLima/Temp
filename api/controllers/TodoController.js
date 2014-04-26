@@ -19,7 +19,7 @@ module.exports = {
     
     create: function(req, res, next) {
       Todo.create( req.params.all(), function todoCreated (err, todo){
-         res.json(todo);
+         res.redirect('/');
       });
     },
     
@@ -48,3 +48,4 @@ module.exports = {
 
   
 };
+

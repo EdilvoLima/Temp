@@ -187,7 +187,7 @@
                             </td>
 
                             <td width="5" align="center">
-                                <a class="bultton" ng-click = "removeTodo($index)">Remove</a>
+                                <a target="_blank" href="/Todo/destroy/{{todo.id}}" class="bultton" onClick="">Remove</a>
                             </td>
 
                             <td width="5" align="center">
@@ -207,7 +207,7 @@
                 </table>
         </div>
 
-        <form action="/Todo/create" method="POST" ng-submit="addTodo()">
+        <form target="_blank" action="/Todo/create" method="POST" ng-submit="addTodo()">
 	  <input class="textarea" type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" name="text"/>
 	  <input class="textarea" type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required name="date"/>
 	  <input class="bultton" type="submit" value="add">
