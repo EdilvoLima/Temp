@@ -8,6 +8,12 @@ todoList.controller('todoListCtrl', function ($scope, $http) {
     $scope.todos = data;
   });
   
+  $scope.deleteTodo = function(id) {
+    $http.delete('/todo/destroy/' + id).success(function(data) {
+      
+    });
+  };
+  
   $scope.move = function(index, direction){
     
     if (direction === 'up') {

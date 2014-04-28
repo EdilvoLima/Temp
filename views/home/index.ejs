@@ -187,7 +187,12 @@
                             </td>
 
                             <td width="5" align="center">
-                                <a target="_blank" href="/Todo/destroy/{{todo.id}}" class="bultton" onClick="">Remove</a>
+				<!--<form action="/Todo/destroy/" method="get" ng-submit="addTodo()">
+				    <input type="hidden" ng-model="todo_prioridade" name="" value="{{todo.id}}"/>
+				    <input class="bultton" type="submit" value="Remover" onClick="window.location.reload()">
+				</form> -->
+				<!-- <a align="center" class="bultton" ng-click = "deleteTodo({{todo.id}})">Remover</a> -->
+				<button type="submit" class="bultton" ng-click="deleteTodo(todo.id)" onClick="window.location.reload()">Remover</button>
                             </td>
 
                             <td width="5" align="center">
@@ -198,7 +203,7 @@
                                 <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>
                             </td>
                             <td>
-                                prioridade: {{$index}} / id:{{todo.id}}
+                                prioridade: {{$index}} / id:{{todo.id}} / tamanho:{{todos.length + 1}}
                             </td>
 
                           </tr>
@@ -207,10 +212,11 @@
                 </table>
         </div>
 
-        <form target="_blank" action="/Todo/create" method="POST" ng-submit="addTodo()">
+        <form action="/Todo/create" method="POST" ng-submit="addTodo()">
 	  <input class="textarea" type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" name="text"/>
 	  <input class="textarea" type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required name="date"/>
-	  <input class="bultton" type="submit" value="add">
+	  <!--<input type="hidden" ng-model="todo_prioridade" name="prioridade" value="{{todos.lenght}}"/> -->
+	  <input class="bultton" type="submit" value="add" onClick="window.location.reload()">
 	</form>
 
     </body>
