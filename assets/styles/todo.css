@@ -8,4 +8,13 @@ div.box {
 		border: 1px solid black;
 		background: orange;
 }
+.h2{
+                font-size:50px;
+            }
+            .textarea {
+                border-color: black;
+                border-style: solid;
+                border-width: thin;
+                padding: 3px;
+            }
 
