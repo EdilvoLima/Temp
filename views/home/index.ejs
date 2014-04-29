@@ -2,12 +2,19 @@
 <html ng-app="todoList" class="body">
     <head>
         <style type="text/css">
-            .h2{
+	    .Three-Dee{
+		font-family: Geneva, serif;
+		line-height: 1em;
+		color: #fff9d6;
+		font-weight:bold;
+		font-size: 80px;
+		text-shadow:0px 0px 0 rgb(145,145,145),0px 1px 0 rgb(126,126,126),0px 2px 0 rgb(108,108,108),0px 3px 0 rgb(90,90,90),0px 4px 0 rgb(71,71,71),0px 5px 0 rgb(53,53,53),0px 6px 0 rgb(34,34,34),0px 7px 0 rgb(16,16,16), 0px 8px 0 rgb(-2,-2,-2),0px 9px 8px rgba(0,0,0,0.45),0px 9px 1px rgba(0,0,0,0.5),0px 0px 8px rgba(0,0,0,.2);}
+	    .h2{
                 font-size:50px;
             }
             .body{
-                background-color: white;
-                background-image: url("http://bigbackground.com/wp-content/uploads/2013/07/wood-desk-wallpaper.jpg");
+                background-image: url("http://oi59.tinypic.com/24do3zp.jpg");
+		background-repeat:repeat;
             }
             .textarea {
                 border-color: black;
@@ -54,61 +61,63 @@
 	    .CSSTableGenerator {
 	margin:0px;padding:0px;
 	width:100%;
-	box-shadow: 0px 0px 0px #888888;
-	border:1px solid #bababa;
-
+	border:1px solid #9b9b9b;
+	
 	-moz-border-radius-bottomleft:16px;
 	-webkit-border-bottom-left-radius:16px;
 	border-bottom-left-radius:16px;
-
+	
 	-moz-border-radius-bottomright:16px;
 	-webkit-border-bottom-right-radius:16px;
 	border-bottom-right-radius:16px;
-
+	
 	-moz-border-radius-topright:16px;
 	-webkit-border-top-right-radius:16px;
 	border-top-right-radius:16px;
-
+	
 	-moz-border-radius-topleft:16px;
 	-webkit-border-top-left-radius:16px;
 	border-top-left-radius:16px;
-            }.CSSTableGenerator table{
+}.CSSTableGenerator table{
     border-collapse: collapse;
         border-spacing: 0;
 	width:100%;
 	height:100%;
 	margin:0px;padding:0px;
-            }.CSSTableGenerator tr:last-child td:last-child {
+}.CSSTableGenerator tr:last-child td:last-child {
 	-moz-border-radius-bottomright:16px;
 	-webkit-border-bottom-right-radius:16px;
 	border-bottom-right-radius:16px;
-            }.CSSTableGenerator table tr:first-child td:first-child {
+}
+.CSSTableGenerator table tr:first-child td:first-child {
 	-moz-border-radius-topleft:16px;
 	-webkit-border-top-left-radius:16px;
 	border-top-left-radius:16px;
-            }.CSSTableGenerator table tr:first-child td:last-child {
+}
+.CSSTableGenerator table tr:first-child td:last-child {
 	-moz-border-radius-topright:16px;
 	-webkit-border-top-right-radius:16px;
 	border-top-right-radius:16px;
-            }.CSSTableGenerator tr:last-child td:first-child{
+}.CSSTableGenerator tr:last-child td:first-child{
 	-moz-border-radius-bottomleft:16px;
 	-webkit-border-bottom-left-radius:16px;
 	border-bottom-left-radius:16px;
-            }.CSSTableGenerator tr:hover td{
-	background-color:#cccccc;
-                }.CSSTableGenerator td{
+}.CSSTableGenerator tr:hover td{
+	
+}
+.CSSTableGenerator tr:nth-child(odd){ background-color:#000000; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#666161; }.CSSTableGenerator td{
 	vertical-align:middle;
-
-	background-color:#6699cc;
-
-	border:1px solid #bababa;
+	
+	
+	border:1px solid #9b9b9b;
 	border-width:0px 1px 1px 0px;
 	text-align:left;
-	padding:17px;
-	font-size:14px;
+	padding:7px;
+	font-size:16px;
 	font-family:Arial;
 	font-weight:normal;
-	color:#000000;
+	color:#ffffff;
 }.CSSTableGenerator tr:last-child td{
 	border-width:0px 1px 0px 0px;
 }.CSSTableGenerator tr td:last-child{
@@ -117,25 +126,25 @@
 	border-width:0px 0px 0px 0px;
 }
 .CSSTableGenerator tr:first-child td{
-		background:-o-linear-gradient(bottom, #003366 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #003366), color-stop(1, #003f7f) );
-	background:-moz-linear-gradient( center top, #003366 5%, #003f7f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#003366", endColorstr="#003f7f");	background: -o-linear-gradient(top,#003366,003f7f);
+		background:-o-linear-gradient(bottom, #262525 5%, #494747 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #262525), color-stop(1, #494747) );
+	background:-moz-linear-gradient( center top, #262525 5%, #494747 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#262525", endColorstr="#494747");	background: -o-linear-gradient(top,#262525,494747);
 
-	background-color:#003366;
-	border:0px solid #bababa;
-	/*text-align:center;*/
+	background-color:#262525;
+	border:0px solid #9b9b9b;
+	text-align:center;
 	border-width:0px 0px 1px 1px;
-	font-size:14px;
+	font-size:20px;
 	font-family:Arial;
 	font-weight:bold;
 	color:#ffffff;
 }
 .CSSTableGenerator tr:first-child:hover td{
-	background:-o-linear-gradient(bottom, #003366 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #003366), color-stop(1, #003f7f) );
-	background:-moz-linear-gradient( center top, #003366 5%, #003f7f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#003366", endColorstr="#003f7f");	background: -o-linear-gradient(top,#003366,003f7f);
+	background:-o-linear-gradient(bottom, #262525 5%, #494747 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #262525), color-stop(1, #494747) );
+	background:-moz-linear-gradient( center top, #262525 5%, #494747 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#262525", endColorstr="#494747");	background: -o-linear-gradient(top,#262525,494747);
 
-	background-color:#003366;
+	background-color:#262525;
 }
 .CSSTableGenerator tr:first-child td:first-child{
 	border-width:0px 0px 1px 0px;
@@ -143,30 +152,100 @@
 .CSSTableGenerator tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
-	</style>
+.searchform {
+	display: inline-block;
+	zoom: 1; /* ie7 hack for display:inline-block */
+	*display: inline;
+	border: solid 1px #d2d2d2;
+	padding: 3px 5px;
+	
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
 
+	-webkit-box-shadow: 0 1px 0px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 0px rgba(0,0,0,.1);
+	box-shadow: 0 1px 0px rgba(0,0,0,.1);
+
+	background: #f1f1f1;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* ie7 */
+	-ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* ie8 */
+}
+.searchform input {
+	font: normal 12px/100% Arial, Helvetica, sans-serif;
+}
+.searchform .searchfield {
+	background: #fff;
+	padding: 6px 6px 6px 8px;
+	width: 202px;
+	border: solid 1px #bcbbbb;
+	outline: none;
+
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+.searchform .searchfield2 {
+	background: #fff;
+	padding: 6px 6px 6px 8px;
+	width: 404px;
+	border: solid 1px #bcbbbb;
+	outline: none;
+
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+.searchform .searchbutton {
+	color: #fff;
+	border: solid 1px #494949;
+	font-size: 11px;
+	height: 27px;
+	width: 27px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.6);
+
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	background: #5f5f5f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9e9e9e), to(#454545));
+	background: -moz-linear-gradient(top,  #9e9e9e,  #454545);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9e9e9e', endColorstr='#454545'); /* ie7 */
+	-ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9e9e9e', endColorstr='#454545'); /* ie8 */
+}
+	</style>
 	<meta charset="utf-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
 	<script src="js/todo.js"></script>
     </head>
     <body ng-controller="todoListCtrl">
-      <h2 class="h2" align="center">Todo List</h2>
-      <span>{{remaining()}} of {{todos.length}} remaining</span>
-	[ <a href="" ng-click="archive()">archive</a> ]
-        <div class="CSSTableGenerator" >
-                <table >
-                    <thead>
-                        <td>Open</td>
-                        <td>Done</td>
-                        <td>Tarefa</td>
-                        <td>Data</td>
-                        <td>Remover</td>
-                        <td>Cima</td>
-                        <td>Baixo</td>
-                        <td>Testes</td>
-                    </thead>
-                    <tbody>
-                        <ul class="unstyled">
+      <h2 class="Three-Dee" align="center">Todo List</h2>
+      <!--<span>{{remaining()}} of {{todos.length}} remaining</span>
+	[ <a href="" ng-click="archive()">archive</a> ]-->
+        <div class="CSSTableGenerator">
+                <table>
+			<tr>
+			    <td>Open</td>
+			    <td>Done</td>
+			    <td>Tarefa</td>
+			    <td>Data</td>
+			    <td>Remover</td>
+			    <td>Cima</td>
+			    <td>Baixo</td>
+			</tr>
+                        
+			
                           <tr type="1" ng-repeat="todo in todos">
 
                             <td width="5" align="center">
@@ -177,17 +256,16 @@
                                 <span class="bultton" ng:click="todo.done = true">Done</span>
                             </td>
 
-                            <!-- <input type="checkbox" ng-model="todo.done"> -->
                             <td width="2000">
                                 <span class="done-{{todo.done}}">{{todo.text}}</span>
                             </td>
 
                             <td width="200" align="center">
-                                <span class="done-{{todo.done}}">{{todo.date}}</span>
+                                <span class="done-{{todo.done}}" align="center">{{todo.date}}</span>
                             </td>
 
                             <td width="5" align="center">
-                                <a class="bultton" ng-click = "removeTodo($index)">Remove</a>
+				<button type="submit" class="bultton" ng-click="deleteTodo(todo.id)" onClick="window.location.reload()">Remover</button>
                             </td>
 
                             <td width="5" align="center">
@@ -197,21 +275,20 @@
                             <td width="5" align="center">
                                 <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>
                             </td>
-                            <td>
-                                prioridade: {{$index}} / id:{{todo.id}}
-                            </td>
 
                           </tr>
-                        </ul>
-                    </tbody>
                 </table>
-        </div>
-
-        <form action="/Todo/create" method="POST" ng-submit="addTodo()">
-	  <input class="textarea" type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" name="text"/>
-	  <input class="textarea" type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required name="date"/>
-	  <input class="bultton" type="submit" value="add">
-	</form>
+	</div>
+	<br>
+	</div>
+	    <form action="/Todo/create" method="POST" ng-submit="addTodo()" class="searchform">
+	      <input class="searchfield2" type="text" ng-model="todo_text"  size="138" placeholder="Adicione sua tarefa aqui!" required name="text"/>
+	      <input class="searchfield" type="date" ng-model="todo_date" placeholder="aaaa-mm-dd" required name="date"/>
+	      <!--<input type="hidden" ng-model="todo_prioridade" name="prioridade" value="{{todos.lenght + 1}}"/> -->
+	      <input class="bultton" type="submit" value="Adicionar" onClick="window.location.reload()">
+	    </form>
+	<div>
+        
 
     </body>
 </html>
