@@ -2,6 +2,13 @@
 <html ng-app="todoList" class="body">
     <head>
         <style type="text/css">
+	    .Three-Dee{
+		font-family: Geneva, serif;
+		line-height: 1em;
+		color: #fff9d6;
+		font-weight:bold;
+		font-size: 80px;
+		text-shadow:0px 0px 0 rgb(145,145,145),0px 1px 0 rgb(126,126,126),0px 2px 0 rgb(108,108,108),0px 3px 0 rgb(90,90,90),0px 4px 0 rgb(71,71,71),0px 5px 0 rgb(53,53,53),0px 6px 0 rgb(34,34,34),0px 7px 0 rgb(16,16,16), 0px 8px 0 rgb(-2,-2,-2),0px 9px 8px rgba(0,0,0,0.45),0px 9px 1px rgba(0,0,0,0.5),0px 0px 8px rgba(0,0,0,.2);}
 	    .h2{
                 font-size:50px;
             }
@@ -107,7 +114,7 @@
 	border-width:0px 1px 1px 0px;
 	text-align:left;
 	padding:7px;
-	font-size:10px;
+	font-size:16px;
 	font-family:Arial;
 	font-weight:normal;
 	color:#ffffff;
@@ -127,7 +134,7 @@
 	border:0px solid #9b9b9b;
 	text-align:center;
 	border-width:0px 0px 1px 1px;
-	font-size:14px;
+	font-size:20px;
 	font-family:Arial;
 	font-weight:bold;
 	color:#ffffff;
@@ -145,13 +152,70 @@
 .CSSTableGenerator tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
+.searchform {
+	display: inline-block;
+	zoom: 1; /* ie7 hack for display:inline-block */
+	*display: inline;
+	border: solid 1px #d2d2d2;
+	padding: 3px 5px;
+	
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	-webkit-box-shadow: 0 1px 0px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 0px rgba(0,0,0,.1);
+	box-shadow: 0 1px 0px rgba(0,0,0,.1);
+
+	background: #f1f1f1;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* ie7 */
+	-ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed'); /* ie8 */
+}
+.searchform input {
+	font: normal 12px/100% Arial, Helvetica, sans-serif;
+}
+.searchform .searchfield {
+	background: #fff;
+	padding: 6px 6px 6px 8px;
+	width: 202px;
+	border: solid 1px #bcbbbb;
+	outline: none;
+
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+.searchform .searchbutton {
+	color: #fff;
+	border: solid 1px #494949;
+	font-size: 11px;
+	height: 27px;
+	width: 27px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.6);
+
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+
+	background: #5f5f5f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9e9e9e), to(#454545));
+	background: -moz-linear-gradient(top,  #9e9e9e,  #454545);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9e9e9e', endColorstr='#454545'); /* ie7 */
+	-ms-filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9e9e9e', endColorstr='#454545'); /* ie8 */
+}
 	</style>
 	<meta charset="utf-8">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
 	<script src="js/todo.js"></script>
     </head>
     <body ng-controller="todoListCtrl">
-      <h2 class="h2" align="center">Todo List</h2>
+      <h2 class="Three-Dee" align="center">Todo List</h2>
       <!--<span>{{remaining()}} of {{todos.length}} remaining</span>
 	[ <a href="" ng-click="archive()">archive</a> ]-->
         <div class="CSSTableGenerator">
@@ -183,7 +247,7 @@
                             </td>
 
                             <td width="200" align="center">
-                                <span class="done-{{todo.done}}">{{todo.date}}</span>
+                                <span class="done-{{todo.done}}" align="center">{{todo.date}}</span>
                             </td>
 
                             <td width="5" align="center">
@@ -198,19 +262,22 @@
                                 <a align="center" class="bultton" ng-click = "move($index, 'down')">Down</a>
                             </td>
                             <td>
-                                prioridade: {{$index}} / id:{{todo.id}} / tamanho:{{todos.length}}
+                                prioridade: {{$index}}  id:{{todo.id}}  tamanho:{{todos.length}}
                             </td>
 
                           </tr>
                 </table>
-        </div>
-
-        <form action="/Todo/create" method="POST" ng-submit="addTodo()">
-	  <input class="textarea" type="text" ng-model="todo_text"  size="138" placeholder="add new todo here" name="text"/>
-	  <input class="textarea" type="date" ng-model="todo_date" placeholder="yyyy-MM-dd" required name="date"/>
-	  <!--<input type="hidden" ng-model="todo_prioridade" name="prioridade" value="{{todos.lenght + 1}}"/> -->
-	  <input class="bultton" type="submit" value="add" onClick="window.location.reload()">
-	</form>
+	</div>
+	<br>
+	</div>
+	    <form action="/Todo/create" method="POST" ng-submit="addTodo()" class="searchform">
+	      <input class="searchfield" type="text" ng-model="todo_text"  size="138" placeholder="Adicione sua tarefa aqui!" required name="text"/>
+	      <input class="searchfield" type="date" ng-model="todo_date" placeholder="aaaa-mm-dd" required name="date"/>
+	      <!--<input type="hidden" ng-model="todo_prioridade" name="prioridade" value="{{todos.lenght + 1}}"/> -->
+	      <input class="bultton" type="submit" value="Adicionar" onClick="window.location.reload()">
+	    </form>
+	<div>
+        
 
     </body>
 </html>
